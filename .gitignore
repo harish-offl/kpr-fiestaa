@@ -1,0 +1,8 @@
+node_modules/
+ai-engine/models/*.pkl
+ai-engine/models/*.json
+frontend/build/
+.env
+*.log
+__pycache__/
+*.pyc

@@ -1,0 +1,31 @@
+# Commands to Push Code to GitHub
+
+## Step 1: Add all changes
+git add .
+
+## Step 2: Commit with message
+git commit -m "Revert map to sidebar navigation and fix all errors"
+
+## Step 3: Pull and merge remote changes
+git pull origin main --rebase
+
+## Step 4: Push to GitHub
+git push origin main
+
+---
+
+## If Step 3 shows conflicts, run:
+git status
+# Fix any conflicts in the files shown
+git add .
+git rebase --continue
+git push origin main
+
+---
+
+## Alternative: If you want to force push (overwrites remote)
+git push origin main --force
+
+---
+
+Copy and paste these commands one by one in your terminal!

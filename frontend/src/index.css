@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Using standard CSS to resolve linter warnings while maintaining Tailwind theme */
+:root {
+  --primary: #0F3D2E;
+  --secondary: #1C2541;
+  --accent: #3EC1D3;
+  --success: #2A9D8F;
+  --warning: #F4A261;
+  --background: #F7F6F2;
+  --charcoal: #1F1F1F;
+  --muted: #6B7280;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(62, 193, 211, 0.2);
+}
+
+.ai-card {
+  background: linear-gradient(to bottom right, rgba(62, 193, 211, 0.05), rgba(62, 193, 211, 0.1));
+  border: 2px solid rgba(62, 193, 211, 0.3);
+}
+
+.verified-badge,
+.risk-badge-low {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(42, 157, 143, 0.1);
+  color: var(--success);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.risk-badge-medium {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(244, 162, 97, 0.1);
+  color: var(--warning);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.risk-badge-high {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #DC2626;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.block-hash {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  word-break: break-all;
+}
+
+.metric-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #E5E7EB;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.metric-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: #D1D5DB;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sidebar-item-active {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(62, 193, 211, 0.2);
+  color: white;
+  font-weight: 600;
+}
+
+.sketch-logo {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.sketch-logo::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity: 0.3;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.chatbot-glow {
+  box-shadow: 0 0 15px rgba(62, 193, 211, 0.4);
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    height: 30%;
+    opacity: 0.5;
+  }
+
+  50% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.animate-wave {
+  animation: wave 0.6s ease-in-out infinite;
+}
